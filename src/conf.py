@@ -39,7 +39,7 @@ class NginxConfig(object):
         'time_local': 'Time'
     }
     LOG_FORMAT = '$remote_addr - $remote_user [$time_local] "$request" $status $bytes_sent "$http_referer" "$http_user_agent" "$gzip_ratio"'
-    TIME_LOCAL_FORMAT = '%d/%b/%Y:%H:%M:%S +0000'
+    TIME_LOCAL_FORMAT = '%d/%b/%Y:%H:%M:%S %z'
 
     REQUEST_RE = re.compile(r'[\s"\[{]\$request[\s"\]}]')
     REQUEST_URI_RE = re.compile(r'\$request_uri')
